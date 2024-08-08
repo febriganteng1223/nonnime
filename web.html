@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>streaming anime</title>
+        <style>
+            body {
+                font-family: arial,sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: rgb(51, 65, 73);
+            background-size: cover; /* Menyesuaikan gambar agar memenuhi seluruh layar */
+            background-position: center; /* Memposisikan gambar di tengah */
+            background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+            background-attachment: fixed; /* Membuat background tetap saat menggulir */
+            }
+            header {
+                background-color: rgb(88, 138, 138);
+                color: black;
+                font-style: bold;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                text-align: center;
+            }
+            nav {
+                background-color: rgb(102, 145, 130);
+                color: black;
+                padding: 5px;
+                text-align: center;
+            }
+            .gambar_kecil {
+                width: 500px;
+                height: 300px;
+                margin-top: 10px;
+                margin-bottom: 0px;
+                margin-left: 10px;
+                margin-right: 10px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            h1 {
+                font-style: bold;
+
+            }
+            h2 {
+                text-align: center;
+                color: aliceblue;
+            }
+            .conrainer {
+                display: flex;
+                width: max-content;
+                gap: 1rem;
+            }
+            .horizontal-scroll {
+                width: 100%;
+                overflow-x: scroll;
+            }
+            footer {
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>home</h1>
+        </header>
+        <nav>
+            <a href="">home</a>
+            <a href="profil.html">profil</a>
+        
+        </nav>
+        <H1>ANIME TERATAS</H1>
+        <div class="horizontal-scroll">
+        <div class="conrainer">
+            <div class="anime-item" data-video="https://www.yourupload.com/embed/g30sxG5VLbFJ">
+                <img src="img\black-clover-movie.jpg" class="gambar_kecil">
+                <h2>black clover</h2>
+            </div>
+            <div class="anime-item" data-video="https://www.yourupload.com/embed/g30sxG5VLbFJ">
+                <img src="img/18622718_1666510046722339_722998955_n.jpg" class="gambar_kecil">
+                <h2>koe no katachi</h2>
+            </div>
+            <div class="anime-item" data-video="https://www.yourupload.com/embed/g30sxG5VLbFJ">
+                <img src="img/Violet-Evergarden-the-Movie-key-visual16x9-e1676779127686.jpg" class="gambar_kecil">
+            </div>
+            <div class="anime-item" data-video="https://www.yourupload.com/embed/g30sxG5VLbFJ">
+                <img src="img/Violet-Evergarden-the-Movie-key-visual16x9-e1676779127686.jpg" class="gambar_kecil">
+            </div>
+            <div class="anime-item" data-video="https://www.yourupload.com/embed/g30sxG5VLbFJ">
+                <img src="img/Violet-Evergarden-the-Movie-key-visual16x9-e1676779127686.jpg" class="gambar_kecil">
+            </div>
+            <div class="anime-item" data-video="https://www.yourupload.com/embed/g30sxG5VLbFJ">
+                <img src="img/Violet-Evergarden-the-Movie-key-visual16x9-e1676779127686.jpg" class="gambar_kecil">
+            </div>
+            
+        </div>
+    </div>
+        <h1>POPULER ANIME</h1>
+        <div class="horizontal-scroll">
+        <div class="conrainer">
+            <div class="anime-item" data-video="https://www.yourupload.com/embed/g30sxG5VLbFJ">
+                <img src="img/Violet-Evergarden-the-Movie-key-visual16x9-e1676779127686.jpg" class="gambar_kecil">
+                <h2>violet</h2>
+            </div>
+            <div class="anime-item" data-video="https://www.yourupload.com/embed/g30sxG5VLbFJ">
+                <img src="img/Violet-Evergarden-the-Movie-key-visual16x9-e1676779127686.jpg" class="gambar_kecil">
+            </div>
+            <div class="anime-item" data-video="https://www.yourupload.com/embed/g30sxG5VLbFJ">
+                <img src="img/Violet-Evergarden-the-Movie-key-visual16x9-e1676779127686.jpg" class="gambar_kecil">
+            </div>
+        </div>
+    </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const animeItems = document.querySelectorAll('.anime-item');
+                animeItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        const videoSrc = this.getAttribute('data-video');
+                        window.location.href = videoSrc;
+                    });
+                });
+            });
+        </script>
+        <footer>
+            <p>&copy; Falero Febrian Pamungkas</p>
+        </footer>
+    </body>
+</html>
